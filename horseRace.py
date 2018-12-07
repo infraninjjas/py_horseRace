@@ -42,13 +42,14 @@ playerName = input('Welcome Player! What is your name?\n>>> ')
 # Menu information
 print('\n\nGreetings %s, Welcome to the horse race challenge. Here are the rules:\n ' % playerName)
 rules = '''
-There are 25 horses
-Each horse has a predetermined finish time, no matter how many times they race
-You may race 5 horses at a time
-After each race, you will see the order in which the horses finished (from first to fifth place)
-**However, you will not know the time in which they finished
+> There are 25 horses
+> Each horse has a predetermined finish time, no matter how many times they race
+> You may race 5 horses at a time
+> After each race, you will receive a printout with the placement of the horses.
+>> However, you will not know the time in which they finished
 
-Your objective is to find the 3 fastest horses, whilst performing as little races as possible.
+> Your objective is to find the 3 fastest horses, whilst performing as little races as possible.
+
 '''
 print(rules)
 mainMenu = 'Select an option \n [0] Race\t [1] Guess\t[2] Print Rules\t [9] Exit\n>>> '
@@ -104,7 +105,7 @@ while(userInput != '9'):
                 guessCount += 1
                 print('Your guess count is now: %i' % guessCount)
                 if(score == 3):
-                    print('Congratulations! You got the 3 fastest horses in %i races' % raceCount)
+                    print('Congratulations! You got the 3 fastest horses in %i races and %i guesses' % (raceCount, guessCount))
                     sys.exit()
                 else:
                     userInput = input(mainMenu) 
